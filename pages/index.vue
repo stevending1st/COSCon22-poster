@@ -1,6 +1,6 @@
 <template>
-  <el-row type="flex" class="poster-container" justify="center">
-    <el-col :span="12">
+  <el-row>
+    <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="12">
       <div id="poster-preview"
         :style="{'cursor': imageUrl ? 'move' : 'default'}"
         @mousedown="mouseDown($event)"
@@ -21,7 +21,7 @@
         </div>
       </div>
     </el-col>
-    <el-col :span="8" class="poster-control" v-loading="isDownloading" element-loading-text="生成海报中">
+    <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="poster-control" v-loading="isDownloading" element-loading-text="生成海报中">
       <el-row>
         <h1>2022 中国开源年会海报生成器</h1>
         <!-- <el-radio-group size="small" v-model="lang">
@@ -120,8 +120,8 @@
 import Vue from 'vue';
 // @ts-ignore
 import domtoimage from 'retina-dom-to-image';
-import trackZhRaw from './data/track-zh';
-import trackEnRaw from './data/track-en';
+import trackZhRaw from '../data/track-zh';
+import trackEnRaw from '../data/track-en';
 // import trackKeyRaw from './data/track-keynote';
 
 type SpeechInfo = {
